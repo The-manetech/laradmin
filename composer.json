@@ -1,0 +1,36 @@
+{
+    "name": "the-manetech/laradmin",
+    "description": "A Laravel Admin Panel Package from The mane Technologies to help you maintain speed and flexibilty during control",
+    "keywords": ["laravel", "admin", "panel"],
+    "license": "MIT",
+    "homepage": "https://github.com/The-manetech/laradmin",
+    "support": {
+        "issues": "https://github.com/The-manetech/laradmin/issues",
+        "source": "https://github.com/The-manetech/laradmin"
+    },
+    "authors": [
+        {
+            "name": "Ilesanmi Olawale Adedotun",
+            "homepage": "https://twitter.com/mane_olawale",
+            "email": "horlawaley001@gmail.com"
+        }
+    ],
+	"require": {
+		"php": ">=7.1",
+	},
+    "autoload": {
+        "psr-4": {
+            "Laradmin\\": "src/"
+        }
+    },
+    "autoload-dev": {
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laradmin\\LaradminServiceProvider"
+            ]
+        }
+    }
+}
