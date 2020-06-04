@@ -21,7 +21,10 @@
     "autoload": {
         "psr-4": {
             "Laradmin\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ],
     },
     "autoload-dev": {
     },
