@@ -45,7 +45,7 @@ class DoctorCommand extends Command
 
         }else{
 
-            $this->info('[-] Laradmin is not installed');
+            $this->info('[√] Laradmin is not installed');
 
         }
 
@@ -55,9 +55,9 @@ class DoctorCommand extends Command
 
         }else{
 
-            $this->info('[-] Laradmin is running some apps');
+            $this->info('[√] Laradmin is running some apps');
 
         }
-        
+
     }
 }

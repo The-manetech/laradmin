@@ -1,1 +1,1 @@
-admin namespace working
+admin namespace working {{$class}}
