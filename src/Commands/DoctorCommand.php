@@ -4,6 +4,7 @@ namespace Laradmin\Commands;
 
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Storage;
 
 class DoctorCommand extends Command
 {
@@ -49,6 +50,8 @@ class DoctorCommand extends Command
 
         }
 
+        $this->line('Scanning Apps...');
+
         if (!laradmin()->hasApp()){
 
             $this->error('[X] No app is running on laradmin');
@@ -57,6 +60,13 @@ class DoctorCommand extends Command
 
             $this->info('[√] Laradmin is running some apps');
 
+        }
+
+        $this->line( base_path(laradmin()->appsRoot) );
+        foreach ( scandir( base_path(laradmin()->appsRoot)) as $value) {
+
+            $this->line($value);
+            
         }
 
     }

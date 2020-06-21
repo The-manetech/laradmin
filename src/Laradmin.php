@@ -2,6 +2,8 @@
 
 namespace Laradmin;
 
+use Illuminate\Support\Facades\Storage;
+
 class Laradmin 
 {
 
@@ -216,10 +218,13 @@ class Laradmin
 
         if ($this->hasApp()){
 
-            //$this->loadApps();
+            foreach ($this->appDirs() as $value) {
+                
+                
+            }
 
         }
-        # code...
+
     }
 
 
@@ -252,6 +257,29 @@ class Laradmin
     {
         return is_dir( base_path('laradmin') );
     }
+
+    /**
+     * This method returns all the directory of the loaded apps
+     * 
+     * @since 1.0
+     * 
+     * @return array $dirs
+     * 
+     */
+    public function appDirs() : array
+    {
+        
+
+        if (!$dirs = Storage::directories( base_path($this->appsRoot) ) ){
+
+            $dirs = [];
+
+        }
+
+        return $dirs;
+    }
+
+
 
 
     
