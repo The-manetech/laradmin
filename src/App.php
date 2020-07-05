@@ -1,6 +1,6 @@
 <?php
 
-namespace Laradmin\App;
+namespace Laradmin;
 
 use Exception;
 

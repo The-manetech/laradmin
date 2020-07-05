@@ -61,7 +61,7 @@ class LaradminServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../publish/config/laradmin.php' => config_path('laradmin.php'),
-            __DIR__.'/../publish/config/laradmin_app.php' => config_path('laradmin_app.php')
+            //__DIR__.'/../publish/config/laradmin_app.php' => config_path('laradmin_app.php')
         ], 'laradmin.config');
 
 
